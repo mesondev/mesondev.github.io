@@ -1,268 +1,1061 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Meson Wakerkwa - Portfolio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Meson Wakerkwa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        /* Hero Banner */
-        #home {
-            background: linear-gradient(rgba(30, 30, 90, 0.8), rgba(80, 20, 100, 0.9)),
-                        url('https://source.unsplash.com/random/1920x1080/?abstract,blue,purple') center/cover no-repeat;
-            background-attachment: fixed;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-
-        /* Tentang Saya */
-        #about {
-            padding: 100px 0;
-            background: #f8f9fa;
-        }
-
-        /* Hasil Kerja */
-        #portfolio {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .portfolio-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        /* Galeri */
-        #gallery {
-            padding: 100px 0;
-            background: #f1f3f5;
-        }
-
-        .gallery-img {
-            border-radius: 12px;
-            transition: transform 0.4s;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #1e1e5a, #4a1e5e);
-            color: #e0e0ff;
-            padding: 80px 0 30px;
-        }
-
-        footer a {
-            color: #b0a8ff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        .social-icons a {
-            font-size: 1.8rem;
-            margin: 0 12px;
-            color: #b0a8ff;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: white;
-        }
-    </style>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/imgs/github1.png">
+    <!-- CSS 
+    ============================================ -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick.css">
+    <link rel="stylesheet" href="assets/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/vendor/aos.css">
+    <link rel="stylesheet" href="assets/css/plugins/feature.css">
+    <!-- Style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(30,30,90,0.95); backdrop-filter: blur(10px);">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Meson Wakerkwa</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Tentang Saya</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Hasil Kerja</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Banner -->
-    <section id="home" class="text-center">
-        <div class="container">
-            <h1 class="display-1 fw-bold mb-4">Meson Wakerkwa</h1>
-            <p class="lead fs-3 mb-5">Web Developer | Photography | Videography</p>
-            <div class="social-icons mb-5">
-                <a href="https://github.com/mesondev" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/meson9918/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/@Mesonwakerkwa" target="_blank"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tentang Saya -->
-    <section id="about">
-        <div class="container">
-            <h2 class="display-2 text-center mb-5">Tentang Saya</h2>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <p class="lead">
-                        Halo! Saya Meson Wakerkwa, seorang pengembang web dan desainer yang bersemangat membangun aplikasi modern serta pengalaman digital yang menarik.
-                    </p>
-                    <p>
-                        Saya menguasai teknologi seperti HTML, CSS, JavaScript, React, Node.js, dan berbagai framework modern lainnya. Selain coding, saya juga aktif membuat konten tutorial di YouTube dan berbagi proyek open-source di GitHub.
-                    </p>
-                    <p>
-                        Saya percaya bahwa teknologi yang baik harus mudah digunakan dan indah dipandang. Mari berkolaborasi!
-                    </p>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://i.pinimg.com/1200x/38/0e/9b/380e9be0e2f9e7d9d115ea8cf0c788ee.jpg" 
-                         alt="Meson Wakerkwa" class="img-fluid rounded-circle shadow-lg" style="max-width: 380px;">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hasil Kerja / Portfolio -->
-    <section id="portfolio">
-        <div class="container">
-            <h2 class="display-2 text-center mb-4">Hasil Kerja</h2>
-            <p class="text-center lead mb-5">Beberapa proyek yang pernah saya kerjakan</p>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <a href="https://example.com/project1" target="_blank" class="text-decoration-none">
-                        <div class="card portfolio-card h-100 shadow">
-                            <img src="https://source.unsplash.com/random/600x400/?web,app" class="card-img-top" alt="Project 1">
-                            <div class="card-body">
-                                <h5 class="card-title">E-Commerce Modern</h5>
-                                <p class="card-text">Website toko online dengan React + Node.js + MongoDB</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://example.com/project2" target="_blank" class="text-decoration-none">
-                        <div class="card portfolio-card h-100 shadow">
-                            <img src="https://source.unsplash.com/random/600x400/?dashboard" class="card-img-top" alt="Project 2">
-                            <div class="card-body">
-                                <h5 class="card-title">Dashboard Admin</h5>
-                                <p class="card-text">Sistem manajemen internal perusahaan menggunakan Vue.js</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="https://example.com/project3" target="_blank" class="text-decoration-none">
-                        <div class="card portfolio-card h-100 shadow">
-                            <img src="https://source.unsplash.com/random/600x400/?mobile" class="card-img-top" alt="Project 3">
-                            <div class="card-body">
-                                <h5 class="card-title">Aplikasi Mobile</h5>
-                                <p class="card-text">Aplikasi iOS & Android dengan React Native</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galeri -->
-    <section id="gallery">
-        <div class="container">
-            <h2 class="display-2 text-center mb-5">Galeri</h2>
-            <div class="row g-4">
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?design" class="img-fluid gallery-img shadow" alt="Galeri 1">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?code" class="img-fluid gallery-img shadow" alt="Galeri 2">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?uiux" class="img-fluid gallery-img shadow" alt="Galeri 3">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?creative" class="img-fluid gallery-img shadow" alt="Galeri 4">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?workspace" class="img-fluid gallery-img shadow" alt="Galeri 5">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?tech" class="img-fluid gallery-img shadow" alt="Galeri 6">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?developer" class="img-fluid gallery-img shadow" alt="Galeri 7">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img src="https://source.unsplash.com/random/600x600/?abstract" class="img-fluid gallery-img shadow" alt="Galeri 8">
-                </div>
-            </div>
-
-            <p class="text-center mt-5 lead text-muted">
-                Koleksi momen, desain, dan karya yang menggambarkan perjalanan saya di dunia teknologi dan kreativitas.
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer / Kontak -->
-    <footer id="contact">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center text-md-start">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face" 
-                         alt="Meson Wakerkwa" class="rounded-circle mb-3" width="150">
-                    <h4>Meson Wakerkwa</h4>
-                </div>
-                <div class="col-md-4 text-center">
-                    <p class="mb-3">
-                        <i class="fas fa-map-marker-alt me-2"></i> Jakarta, Indonesia<br>
-                        <i class="fas fa-envelope me-2"></i> meson.wakerkwa@email.com<br>
-                        <i class="fas fa-phone me-2"></i> +62 812-3456-7890
-                    </p>
-                </div>
-                <div class="col-md-4 text-center text-md-end">
-                    <div class="social-icons">
-                        <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+<body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+    <!-- Start Header -->
+    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+            <!-- Start Header Left -->
+            <div class="col-lg-2 col-6">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/images/imgs/fovicon logo.png" alt="logo" width="100px">
+                        </a>
                     </div>
-                    <p class="mt-4 small">&copy; 2025 Meson Wakerkwa. All rights reserved.</p>
+                </div>
+            </div>
+            <!-- End Header Left -->
+            <!-- Start Header Center -->
+            <div class="col-lg-10 col-6">
+                <div class="header-center">
+                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+                        <!-- Start Mainmanu Nav -->
+                        <ul class="primary-menu nav nav-pills">
+                            <li class="nav-item"><a class="nav-link" href="#home">Berada</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#pengalaman">Pegalaman</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#project-showcase">Projek</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#resume">Riwayat Hidup</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#my-articles"> Artikel Saya</a></li>
+                        </ul>
+                        <!-- End Mainmanu Nav -->
+                    </nav>
+                    <!-- Start Header Right  -->
+                    <div class="header-right">
+                        <a class="rn-btn" target="_blank"
+                            href="https://wa.me/081344309059?text=Hello%20Kaka%20Meson%20!"><span> <i
+                                    class="fa-brands fa-whatsapp fs-2 me-2"></i> WHATSAPP ME</span></a>
+                        <div class="hamberger-menu d-block d-xl-none">
+                            <i id="menuBtn" class="feather-menu humberger-menu"></i>
+                        </div>
+                        <div class="close-menu d-block">
+                            <span class="closeTrigger">
+                                <i data-feather="x"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- End Header Right  -->
+
+                </div>
+            </div>
+            <!-- End Header Center -->
+        </div>
+    </header>
+    <!-- End Header Area -->
+
+    <!-- Start Popup Mobile Menu  -->
+    <div class="popup-mobile-menu">
+        <div class="inner">
+            <div class="menu-top">
+                <div class="menu-header">
+                    <a class="logo" href="index.html">
+                        <img src="assets/images/imgs/Gambar WhatsApp 2025-08-08 pukul 10.44.25_f3232b55.jpg" alt="Personal Portfolio">
+                    </a>
+                    <div class="close-button">
+                        <button class="close-menu-activation close"><i data-feather="x"></i></button>
+                    </div>
+                </div>
+                <p class="discription">👋🏽 Halo, saya Meson! Saya mahasiswa Informatika di Uningrat Papua, fokus belajar web programming. Saat ini saya aktif di komunitas SaCode yang metode belajarnya sangat mudah dipahami.</p>
+
+
+            </div>
+            <div class="content">
+                <ul class="primary-menu nav nav-pills onepagenav">
+                    <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Berada</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#pengalaman">pegalaman</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#project-showcase">Projek
+                            Showcase</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Riwayat Hidup</a></li>
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#my-articles">Artikel Saya</a></li>
+                </ul>
+                <!-- social sharea area -->
+                <div class="social-share-style-1 mt--40">
+                    <span class="title">find with me</span>
+                    <ul class="social-share d-flex liststyle">
+                        <li class="facebook"><a href="https://web.facebook.com/meson.wakerkwa.9918?"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-facebook">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg></a>
+                        </li>
+                        <li class="instagram"><a href="https://www.instagram.com/meson9918/"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-instagram">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg></a>
+                        </li>
+                        <li class="linkedin"><a href="https://www.linkedin.com/in/meson-wakerkwa-a005b4243/"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-linkedin">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                    </path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- end -->
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Mobile Menu  -->
+
+
+
+    <!-- Start Main Page Wrapper -->
+    <main class="main-page-wrapper">
+
+        <!-- Start Slider Area -->
+        <div id="home" class="berada">
+            <div class="slide slider-style-2">
+                <div class="container">
+                    <div class="row align-items-center row--30">
+                        <div class="col-lg-5">
+                            <div class="thumbnail style-2">
+                                <div class="inner ">
+                                    <img class="w-100" src="assets/images/imgs/profile.png"
+                                        alt="Personal Portfolio Images">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7 mt_md--40 mt_sm--40">
+                            <div class="content">
+                                <div class="inner">
+                                    <h1 class="title">Hi, I’m <span>Meson Wakerkwa</span><br>
+                                        <span class="header-caption" id="page-top">
+                                            <span class="cd-headline clip is-full-width">
+                                                <span class="cd-words-wrapper" style="width: 178px;">
+                                                    <b class="is-visible">Belajar Coding Besama SaCode.</b>
+                                                    <!-- <b class="is-hidden">Belajar Bersa OTO.</b> -->
+                                                    <b class="is-hidden">Edukasi Coding.</b>
+                                                    <b class="is-hidden">Developer.</b>
+                                                    <b class="is-hidden">Fotografer Papua.</b>
+                                                </span>
+
+                                            </span>
+                                        </span>
+                                    </h1>
+
+                                    <div>
+                                        <p class="discription">👋🏽 Halo, saya Meson! Saya mahasiswa Informatika di Uningrat Papua, fokus belajar web programming. Saat ini saya aktif di komunitas SaCode yang metode belajarnya sangat mudah dipahami.</p>
+
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="social-share-inner-left">
+                                            <span class="title">temukan bersama saya</span>
+
+                                            <ul class="social-share d-flex liststyle">
+                                                <li class="facebook"><a href="https://github.com/mesondev"
+                                                        target="_blank">
+                                                        <i data-feather="github"></i></a>
+                                                <li class="linkedin"><a href="https://www.linkedin.com/in/meson-wakerkwa-a005b4243/"
+                                                        target="_blank"><i data-feather="linkedin"></i></a>
+                                                </li>
+                                                <li class="instagram"><a href="https://www.instagram.com/meson9918/"
+                                                        target="_blank">
+                                                        <i data-feather="instagram"></i></a>
+                                                </li>
+                                                <li class="facebook"><a href="https://web.facebook.com/meson.wakerkwa.9918?"
+                                                        target="_blank">
+                                                        <i data-feather="facebook"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
+        <!-- End Slider Area -->
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Start What I Do area -->
+        <section class="pengalaman" id="pengalaman">
+            <div class="container">
+                <p class="pengalaman-subjudul">LEBIH DARI 2 TAHUN PENGALAMAN</p>
+                <h2 class="pengalaman-judul">Saya Belajar Coding di Komunitas SaCode Papua</h2>
+                <p class="pengalaman-deskripsi" style="text-align:center; color:#ccc; margin-bottom:40px;">
+                    Sejak tahun 2025, saya aktif belajar dan mengembangkan keterampilan di bidang web development, khususnya dalam HTML, CSS, dan JavaScript. Komunitas SaCode menjadi tempat terbaik untuk bertumbuh bersama teman-teman programmer muda Papua.
+                </p>
+
+                <div class="kartu-pengalaman">
+                    <img src="https://sacode.web.id/images/logo-sacode-web-2025-dark.png"
+                        alt="Logo SaCode">
+                    <div class="isi-kartu">
+                        <span class="badge">2025 – Sekarang</span>
+                        <h3>Saya Masih Aktif</h3>
+                        <p>Mendalami Bahasa Pemrograman</p>
+                        <p class="deskripsi">Melalui berbagai pelatihan dan proyek Studi Kasus komunitas di SaCode Papua, saya terus mengasah keterampilan dan berbagi ilmu dengan anggota lain.</p>
+                    </div>
+                    <a href="https://sacode.web.id" target="_blank" class="tombol-kunjungi">www.sacode.web.id</a>
+                </div>
+
+            </div>
+        </section>
+        <br>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!-- End What I Do area -->
+        <br>
+
+        <!-- Start What I Do area -->
+        <section class="pengalaman" id="pengalaman">
+            <div class="container">
+                <p class="pengalaman-subjudul">LEBIH DARI 2 TAHUN PENGALAMAN</p>
+                <h2 class="pengalaman-judul">Saya berhasil mendapatkan Sertifikat Dari SaCode </h2>
+
+
+                <div class="kartu-pengalaman">
+                    <img src="assets/images/imgs/sertifikat Sacode.jpg" alt="Logo SaCode" width="200px">
+                    <!-- <img src="assets/images/imgs/sertifikat.scrip.jpg" alt="Logo SaCode" width="200px"> -->
+                    <div class="isi-kartu">
+                        <span class="badge">2025 – Sekarang</span>
+                        <h3>Saya Masih Aktif</h3>
+                        <p>Mendalami Bahasa Pemrograman</p>
+                        <p class="deskripsi">
+                           Selama mengikuti komunitas SaCode, saya banyak mendapatkan ilmu baru yang sangat bermanfaat
+                            untuk masa depan saya,
+                            termasuk dasar-dasar pemrograman JavaScript. Saya juga berhasil memperoleh
+                            <strong>Sertifikat</strong> hasil belajar,
+                            yang semakin memotivasi saya untuk terus mendalami dunia coding dan bercita-cita menjadi web
+                            developer andal yang membangun masa depan digital Papua.
+                        </p>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1L_BUa_YiIhJX2EWA8ZnCiIKZtAxoBD5P/view?usp=sharing"
+                        target="_blank" class="tombol-kunjungi">Sertifikat.com</a>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Start Project Showcase Area -->
+        <div id="project-showcase" class="rn-portfolio-area rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <span class="subtitle">Inilah hasil karya saya selama ini.</span>
+                            <h2 class="title">Galeri Proyek</h2>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
+
+                    <!-- Start Single Portfolio -->
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://wakerkwameson.github.io/Coffee_Tiom.id/" target="_blank"></a>
+                                    <img src="https://cenderawasihpos.jawapos.com/wp-content/uploads/2023/05/foto-boks-bawah-3.jpg" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://wakerkwameson.github.io/Coffee_Tiom.id/" target="_blank">
+                                                <i class="feather-globe"></i>
+                                               https://wakerkwameson.github.io/Coffee_Tiom.id/
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">
+                                        <a href="https://wakerkwameson.github.io/Coffee_Tiom.id/" target="_blank">
+                                            KOPI TIOM.IO
+                                            <i class="feather-arrow-up-right"> </i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Portfolio -->
+
+                    <!-- Start Single web ikbm -->
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://wakerkwameson.github.io/websitekbm.io/"
+                                        target="_blank">
+                                        <img src="assets/images/imgs/ikbm.png" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://wakerkwameson.github.io/websitekbm.io/"
+                                                target="_blank" <i class="feather-globe"></i>
+                                                https://wakerkwameson.github.io/websitekbm.io/
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">
+                                        <a href="https://wakerkwameson.github.io/websitekbm.io/"
+                                            target="_blank">
+                                            WEb Ikatan Keluarga Besar Milimbo IKBM<i class="feather-arrow-up-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End web ikbm -->
+
+                    <!-- Start Single Portfolio -->
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://wakerkwameson.github.io/Website_Gereja_Baptis_Yohanes.id/" target="_blank">
+                                        <img src="./assets/images/imgs/sistem informasi gereja .png" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://wakerkwameson.github.io/Website_Gereja_Baptis_Yohanes.id/" target="_blank">
+                                                <i class="feather-globe"></i> https://GB.Yohanesentrop.id/
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">
+                                        <a href="https://wakerkwameson.github.io/Website_Gereja_Baptis_Yohanes.id/" target="_blank">
+                                            Gereja Baptis Yohanes Entrop <i class="feather-arrow-up-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Portfolio -->
+
+                    <!-- Start Single Portfolio -->
+                    <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://mesondev.github.io/roict-coffee.io/" target="_blank">
+                                        <img src="./assets/images/imgs/Royct-Coffee.png"
+                                            alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://mesondev.github.io/roict-coffee.io/" target="_blank"><i
+                                                    class="feather-globe"></i>
+                                                https://mesondev.github.io</a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">
+                                        <a href="https://mesondev.github.io/roict-coffee.io/ " target=" _blank">
+                                            Royct-Coffee <i class="feather-arrow-up-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Portfolio -->
+
+                    <!-- Start Single Portfolio -->
+                    <!-- <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://royswanimbo.github.io/website.com/" target="_blank">
+                                        <img src="assets/images/roys/BADANG PENGURUS KORWIL BUBUKGONAK.png"
+                                            alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://royswanimbo.github.io/website.com/" target="_blank" <i
+                                                class="feather-globe"></i>
+                                                https://pdkb.id
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">
+                                        <a href="https://royswanimbo.github.io/website.com/" target="_blank">
+
+
+                                            https://pd/kb.id<i class="feather-arrow-up-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- End Single Portfolio -->
+
+
+                    <!-- Start Single Portfolio -->
+                    <!-- <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="https://royswanimbo.github.io/website_caffenogi.oi/" target="_blank">
+                                        <img src="assets/images/roys/kopi.jpg" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="https://royswanimbo.github.io/website_caffenogi.oi/"
+                                                target="_blank" <i class="feather-globe"></i>
+                                                https://royswanimbo.github.io/website_caffenogi.oi/
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <h4 class="title">
+                                        <a href="https://royswanimbo.github.io/website_caffenogi.oi/" target="_blank">
+
+
+                                            Kedai Kopi Nogi Caffe<i class="feather-arrow-up-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- End Single Portfolio -->
+
+                    <!-- End Project Showcase Area -->
+
+                    <!-- Mulai Area Resume -->
+                    <div id="resume" class="rn-resume-area rn-section-gap section-separator">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                        data-aos-once="true" class="section-title text-center">
+                                        <span class="subtitle">Lebih dari 3 Tahun Pengalaman</span>
+                                        <h2 class="title">Riwayat Hidup</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt--45">
+                                <div class="col-lg-12">
+                                    <ul data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                        data-aos-once="true" class="rn-nav-list nav nav-tabs" id="myTabs"
+                                        role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="education-tab" data-bs-toggle="tab"
+                                                href="#education" role="tab" aria-controls="education"
+                                                aria-selected="true">Pendidikan</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="professional-tab" data-bs-toggle="tab"
+                                                href="#professional" role="tab" aria-controls="professional"
+                                                aria-selected="false">Keahlian Profesional</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="experience-tab" data-bs-toggle="tab"
+                                                href="#experience" role="tab" aria-controls="experience"
+                                                aria-selected="false">Pengalaman Kerja</a>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Start Tab Content Wrapper  -->
+                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
+                                        data-aos-once="true" class="rn-nav-content tab-content" id="myTabContents">
+
+                                        <!-- Start Single Tab  -->
+                                        <div class="tab-pane show active fade single-tab-area" id="education"
+                                            role="tabpanel" aria-labelledby="education-tab">
+                                            <div class="personal-experience-inner mt--40">
+                                                <div class="row">
+                                                    <!-- Start Skill List Area  -->
+                                                    <div class="col-md-10 mx-auto col-12">
+                                                        <div class="content">
+                                                            <span class="subtitle">2022-2025</span>
+                                                            <h4 class="maintitle">Riwayat Pendidikan </h4>
+                                                            <div class="experience-list">
+
+                                                                <!-- Start Single List  -->
+                                                                <div class="resume-single-list">
+                                                                    <div class="inner">
+                                                                        <div class="heading">
+                                                                            <div class="title">
+                                                                                <h4>Perjalanan Belajar Meson Wakerkwa</h4>
+                                                                                <span>Kampus UNINGRAT Papua & Komunitas SaCode                                                                        
+                                                                                  </span>
+                                                                            </div>
+                                                                            <div class="date-of-time">
+                                                                                <span class="d-block">2022-2025</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="description">
+                                                                            Saya adalah Meson Wakerkwa, seorang anak
+                                                                            gunung yang sedang menempuh ilmu di bangku
+                                                                            kuliah jurusan Informatika.
+                                                                            Fokus saya adalah menjadi seorang web
+                                                                            programmer yang handal. Saat ini, saya juga
+                                                                            aktif belajar bersama komunitas
+                                                                            <strong>SaCode</strong>, tempat yang luar biasa untuk berbagi dan bertumbuh. Di sana, saya tidak hanya belajar coding, tapi juga membangun semangat untuk menciptakan solusi teknologi yang dibutuhkan masyarakat. Saya percaya, belajar adalah jalan untuk memberi dampak positif bagi banyak orang.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- End Single List  -->
+
+                                                                <!-- Start Single List  -->
+                                                                <div class="resume-single-list">
+                                                                    <div class="inner">
+                                                                        <div class="heading">
+                                                                            <div class="title">
+                                                                                <h4>Perjalanan Belajar Coding</h4>
+                                                                                <span> Di Komunitas SaCode</span>
+                                                                            </div>
+                                                                            <div class="date-of-time">
+                                                                                <span>2023-2025</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="description">
+                                                                            Selama menempuh ilmu coding, saya berhasil membuat proyek pertama untuk SMP Negeri 4 Pirime. Dengan dukungan komunitas SaCode, saya terus mengembangkan kemampuan dan berkontribusi menciptakan solusi teknologi yang bermanfaat bagi masyarakat. Proyek ini menjadi langkah awal untuk mewujudkan visi saya dalam membangun teknologi yang membantu kehidupan banyak orang.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- End Single List  -->
+
+                                                                <!-- Start Single List  -->
+                                                                <!-- <div class="resume-single-list">
+                                                                    <div class="inner">
+                                                                        <div class="heading">
+                                                                            <div class="title">
+                                                                                <h4>Pengembangan Website Promosi Produk
+                                                                                </h4>
+                                                                                <span>PYCH TOP.ID</span>
+                                                                            </div>
+                                                                            <div class="date-of-time">
+                                                                                <span>2024</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="description">
+                                                                            Saya membangun sebuah website di PYCH TOP.ID
+                                                                            pada tahun 2024 dengan tujuan untuk
+                                                                            mempromosikan berbagai produk lokal yang ada
+                                                                            di PYCH TOP.ID. Proyek ini saya kerjakan
+                                                                            sebagai bentuk kontribusi dalam mendukung
+                                                                            perkembangan UMKM dan ekonomi digital di
+                                                                            Papua.
+                                                                        </p>
+                                                                    </div>
+                                                                </div> -->
+
+                                                                <!-- End Single List  -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Skill List Area  -->
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Tab  -->
+
+                                        <!-- Start Single Tab  -->
+                                        <div class="tab-pane fade " id="professional" role="tabpanel"
+                                            aria-labelledby="professional-tab">
+                                            <div class="personal-experience-inner mt--40">
+                                                <div class="row row--40">
+
+                                                    <!-- Start Single Progressbar  -->
+                                                    <div class="col-lg-6 col-md-6 col-12">
+                                                        <div class="progress-wrapper">
+                                                            <div class="content">
+                                                                <span class="subtitle">Features</span>
+                                                                <h4 class="maintitle">Design Skill</h4>
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Canva</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.8s"
+                                                                            data-wow-delay=".6s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">90%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Photoshop</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.7s"
+                                                                            data-wow-delay=".5s" role="progressbar"
+                                                                            style="width: 80%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">50%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <!-- <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Whimsical</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.5s"
+                                                                            data-wow-delay=".3s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">53%</span></div>
+                                                                    </div>
+                                                                </div> -->
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">PixeiLab</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 75%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">95%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Google Slides</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.9s"
+                                                                            data-wow-delay=".7s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">70%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Single Progressbar  -->
+
+                                                    <!-- Start Single Progressbar  -->
+                                                    <div class="col-lg-6 col-md-6 col-12 mt_sm--60">
+                                                        <div class="progress-wrapper">
+                                                            <div class="content">
+                                                                <span class="subtitle">Features</span>
+                                                                <h4 class="maintitle">Development Skill</h4>
+                                                                <!-- Start Single Progress Charts -->
+                                                                <!-- <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Bootstrap</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.5s"
+                                                                            data-wow-delay=".3s" role="progressbar"
+                                                                            style="width: 100%" aria-valuenow="70"
+                                                                            aria-valuemin="0" aria-valuemax="70"><span
+                                                                                class="percent-label">70%</span></div>
+                                                                    </div>
+                                                                </div> -->
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Tailwind CSS</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.6s"
+                                                                            data-wow-delay=".4s" role="progressbar"
+                                                                            style="width: 70%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">50%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">JAVASCRIPT</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.7s"
+                                                                            data-wow-delay=".5s" role="progressbar"
+                                                                            style="width: 45%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">40%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <!-- <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">Laravel Framework
+                                                                    </h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.9s"
+                                                                            data-wow-delay=".7s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">20%</span></div>
+                                                                    </div>
+                                                                </div> -->
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">CMS Wordpress</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.8s"
+                                                                            data-wow-delay=".6s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="30"
+                                                                            aria-valuemin="0" aria-valuemax="30"><span
+                                                                                class="percent-label">30%</span></div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single Progress Charts -->
+
+                                                                <!-- Start Single Progress Charts -->
+                                                                <!-- <div class="progress-charts">
+                                                                    <h6 class="heading heading-h6">LMS Moodle</h6>
+                                                                    <div class="progress">
+                                                                        <div class="progress-bar wow fadeInLeft"
+                                                                            data-wow-duration="0.9s"
+                                                                            data-wow-delay=".7s" role="progressbar"
+                                                                            style="width: 95%" aria-valuenow="85"
+                                                                            aria-valuemin="0" aria-valuemax="100"><span
+                                                                                class="percent-label">20%</span></div>
+                                                                    </div>
+                                                                </div> -->
+                                                                <!-- End Single Progress Charts -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Single Progressbar  -->
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Tab  -->
+
+                                        <!-- Start Single Tab  -->
+                                        <div class="tab-pane fade" id="experience" role="tabpanel"
+                                            aria-labelledby="experience-tab">
+                                            <div class="personal-experience-inner mt--40">
+                                                <div class="row">
+                                                    <!-- Start Skill List Area 2nd  -->
+                                                    <div class="col-md-10 mx-auto col-12 mt_md--60 mt_sm--60">
+                                                        <div class="content">
+                                                            <span class="subtitle">2025 - sekarang</span>
+                                                            <h4 class="maintitle">Pengalaman Kerja</h4>
+                                                            <div class="experience-list">
+
+                                                                <!-- Start Single List  -->
+                                                                <div class="resume-single-list">
+                                                                    <div class="inner">
+                                                                        <div class="heading">
+                                                                            <div class="title">
+                                                                                <h4>Belum Memiliki Pengalaman Kerja
+                                                                                    Formal</h4>
+                                                                                <span>Masih dalam proses belajar dan
+                                                                                    mengembangkan diri</span>
+                                                                            </div>
+                                                                            <div class="date-of-time">
+                                                                                <span>2025 Sekarang<span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="description"> Saat ini saya belum
+                                                                            memiliki pengalaman kerja formal di
+                                                                            perusahaan, namun saya aktif mengembangkan
+                                                                            keterampilan di bidang web development dan
+                                                                            teknologi informasi. Saya membuat berbagai
+                                                                            proyek pribadi dan mengikuti kegiatan
+                                                                            komunitas seperti SaCode untuk meningkatkan
+                                                                            kemampuan saya. Saya percaya bahwa setiap
+                                                                            langkah kecil dalam proses belajar adalah
+                                                                            fondasi besar menuju masa depan yang lebih
+                                                                            baik.</p>
+
+                                                                        <a href="https://github.com/mesondev"
+                                                                            target="_blank" class="text-primary">
+                                                                            Mesonwakerkwa <i
+                                                                                class="feather-arrow-up-right"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- End Single List  -->
+
+                                                                <!-- Start Single List  -->
+                                                                <div class="resume-single-list">
+                                                                    <div class="inner">
+                                                                        <div class="heading">
+                                                                            <div class="title">
+                                                                                <h4>Belajar Coding secara Mandiri</h4>
+                                                                                <span>Komunitas SaCode - Papua</span>
+                                                                            </div>
+                                                                            <div class="date-of-time">
+                                                                                <span>2025 - Sekarang</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="description">
+                                                                            Saya belajar coding secara mandiri, baik di rumah maupun di mana saja dan kapan saja selama saya merasa nyaman. Melalui komunitas SaCode, saya semakin termotivasi untuk terus mengasah kemampuan dan berinteraksi dengan sesama pembelajar teknologi. Proses belajar ini bukan hanya membentuk keterampilan teknis, tetapi juga karakter pantang menyerah dan semangat untuk berkontribusi membangun Papua melalui teknologi.
+                                                                        </p>
+
+                                                                        <a href="https://github.com/mesondev"
+                                                                            target="_blank" class="text-primary">
+                                                                            Mesonwakerkwa <i
+                                                                                class="feather-arrow-up-right"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- End Single List  -->
+
+                                                                <!-- Start Single List  -->
+                                                                <div class="resume-single-list">
+                                                                    <div class="inner">
+                                                                        <div class="heading">
+                                                                            <div class="title">
+                                                                                <h4>Tutor Coding Dasar HTML & CSS</h4>
+                                                                                <span>LSM Pengembangan SDM & Riset di
+                                                                                    Papua</span>
+                                                                            </div>
+                                                                            <div class="date-of-time">
+                                                                                <span>2025 - Sekarang</span>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="description">
+                                                                            Saat ini saya mengajar dasar-dasar pemrograman web seperti HTML dan CSS. Tujuan saya bukan hanya untuk mengajar, tetapi juga untuk semakin memahami dan mendalami bahasa pemrograman yang saya pelajari. Karena dengan mengajar, saya bisa sekaligus belajar lebih dalam dan memahami logika coding dengan lebih baik. Ini juga menjadi sarana bagi saya untuk terus berkembang bersama komunitas belajar seperti SaCode, agar ke depan bisa memberi dampak lebih luas melalui teknologi di Papua.
+                                                                        </p>
+
+                                                                        <a href="https://github.com/mesondev"
+                                                                            target="_blank" class="text-primary">
+                                                                            Mesonwakerkwa <i
+                                                                                class="feather-arrow-up-right"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- End Single List  -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Skill List Area  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single Tab  -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Resume Area -->
+
+                    <!-- Mulai Area Artikel -->
+                    <!-- <div id="my-articles"
+                        class="rn-portfolio-area portfolio-style-three rn-section-gap section-separator">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                        data-aos-once="true" class="section-title text-center">
+                                        <span class="subtitle">Saya sedang belajar menulis artikel</span>
+                                        <h2 class="title">Artikel Saya</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt--25 mt_md--5 mt_sm--5">
+                                <div class="col-lg-12">
+                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="200"
+                                        data-aos-once="true"
+                                        class="portfolio-wrapper portfolio-slick-activation slick-arrow-style-one rn-slick-dot-style"> -->
+
+
+                                        <!-- Start Article Item  -->
+
+                                        <!-- End Article Item  -->
+
+                                        <!-- Start Article Item  -->
+
+                                        <!-- End Article Item  -->
+
+                                        <!-- Start Article Item  -->
+                                        <!-- <div class="rn-portfolio-slick">
+                                            <div class="rn-portfolio" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModalCenter">
+                                                <div class="inner">
+                                                    <div class="thumbnail">
+                                                        <a href="https://kedaikopiapi.web.app/" target="_blank">
+                                                            <img src="https://leapsurabaya.sch.id/rafogec/uploads/2021/06/belajar-coding.jpg"
+                                                                alt="Janzen Faidiban - Beberapa Alasan Anak Muda Ingin Belajar Coding">
+                                                        </a>
+                                                    </div>
+                                                    <div class="content">
+                                                        <div class="category-info">
+                                                            <div class="category-list">
+                                                                <a href="https://kedaikopiapi.web.app/"
+                                                                    target="_blank">Artikel saya</a>
+                                                                <p>Motivasi Saya Belajar Coding</p>
+                                                                <p>Emosi saya menjadi motivasi dalam mengembangkan Teknologi dan terus Belajar</p>
+                                                            </div>
+                                                        </div>
+                                                        <h4 class="title">
+                                                            <a href="https://kedaikopiapi.web.app/" target="_blank">
+
+                                                                <i class="feather-arrow-up-right"></i>
+                                                            </a>
+                                                        </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                        <!-- End Article Item  -->
+
+                                        <!-- Start Article Item  -->
+
+                                        <!-- End Article Item  -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Article Area -->
+
+    </main>
+
+    <!-- Rn footer area Start -->
+    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
+        <div class="container pb--80 pb_sm--40 plr_sm--20">
+            <div class="row">
+                <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="logo-thumbnail">
+                        <a href="#"><img src="assets/images/imgs/profile.png" alt="logo-image"></a>
+                    </div>
+                    <div class="social-icone-wrapper">
+                        <ul class="social-share d-flex liststyle">
+                            <li class="facebook"><a href="https://github.com/WakerkwaMeson" target="_blank">
+                                    <i data-feather="github"></i></a>
+                            <li class="linkedin"><a href="https://www.linkedin.com/in/meson-wakerkwa-a005b4243/" target="_blank"><i
+                                        data-feather="linkedin"></i></a>
+                            </li>
+                            <li class="instagram"><a href="https://www.instagram.com/meson9918/" target="_blank">
+                                    <i data-feather="instagram"></i></a>
+                            </li>
+                            <li class="facebook"><a href="https://web.facebook.com/meson.wakerkwa.9918?" target="_blank">
+                                    <i data-feather="facebook"></i></a>
+                            </li>
+                            <!-- <li class="x-icon"><a href="https://web.facebook.com/meson.wakerkwa.9918?" target="_blank">
+                                    <i data-feather="x-icon"></i></a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sl-9 col-12 mt_sm--20 col-lg-9 col-md-6 col-sm-6 col-12">
+                    <div class="menu-wrapper">
+                        <div class="menu-title">
+                            <h6>saya akan mencoba menceritakan tentang diri saya dari sudut pandang saya sendiri
+                            </h6>
+                        </div>
+                        <div>
+                            Saya Meson, seorang anak gunung yang sedang mendalami dunia coding di komunitas SaCode. Saya belajar agar bisa menciptakan solusi yang dibutuhkan oleh masyarakat.
+                            <small class="d-block fs-5 mt-3">_ Tulisan ini dibantu oleh OpenAI 😁 🙏</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">© 2025. All rights reserved.</p>
+        </div>
+    </div>
+
+
+    <!-- JS ============================================ -->
+    <script src="assets/js/vendor/jquery.js"></script>
+    <script src="assets/js/vendor/modernizer.min.js"></script>
+    <script src="assets/js/vendor/feather.min.js"></script>
+    <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.js"></script>
+    <script src="assets/js/vendor/text-type.js"></script>
+    <script src="assets/js/vendor/wow.js"></script>
+    <script src="assets/js/vendor/aos.js"></script>
+    <script src="assets/js/vendor/particles.js"></script>
+    <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
+    <!-- main JS -->
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
